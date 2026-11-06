@@ -1,4 +1,5 @@
 import streamlit as st
+from textwrap import dedent
 
 st.set_page_config(
     page_title='나를 소개합니다',
@@ -7,8 +8,8 @@ st.set_page_config(
     initial_sidebar_state='collapsed',
 )
 
-st.markdown(
-    """
+st.html(
+    dedent("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -261,12 +262,11 @@ st.markdown(
         .footer { flex-direction: column; }
     }
     </style>
-    """,
-    unsafe_allow_html=True,
+    """),
 )
 
-st.markdown(
-    """
+st.html(
+    dedent("""
     <main class="portfolio">
         <div class="rainbow"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
         <header class="topline">
@@ -279,7 +279,7 @@ st.markdown(
         <section class="hero">
             <div class="hero-copy">
                 <p class="eyebrow"><span></span> NICE TO MEET YOU · 2026</p>
-                <h1>안녕하세요,<br><span class="name">이름</span>입니다<span class="spark"> ✳</span></h1>
+                <h1>안녕하세요,<br><span class="name">문서윤</span>입니다<span class="spark"> ✳</span></h1>
                 <p class="hero-intro">좋아하는 것들을 하나씩 모아 만든 나의 작은 소개 페이지예요. 새로운 사람과 장소를 만나며 매일 조금씩 자라고 있어요.</p>
                 <a class="hero-link" href="#about">나를 더 알아보기 <span aria-hidden="true">↘</span></a>
             </div>
@@ -295,13 +295,13 @@ st.markdown(
                 <span class="section-number">01 / ABOUT</span>
             </div>
             <div class="about-grid">
-                <div class="about-item"><span class="label">내 소개</span><strong>호기심 많은 사람<br>새로운 도전을 좋아해요.</strong><p>나를 잘 보여주는 문장으로 바꿔보세요.</p></div>
-                <div class="about-item"><span class="label">나의 소속</span><strong>OO학교 · OO학과</strong><p>학교, 회사, 동아리 등 나의 소속을 적어주세요.</p></div>
-                <div class="about-item"><span class="label">요즘 관심사</span><strong>배우고, 만들고,<br>함께 나누기</strong><p>요즘 푹 빠져 있는 것이 있나요?</p></div>
+                <div class="about-item"><span class="label">내 소개</span><strong>미래의 교사<br>배움의 즐거움을 나누고 싶어요.</strong><p>사람들과 함께 배우며 성장하는 것을 좋아해요.</p></div>
+                <div class="about-item"><span class="label">나의 소속</span><strong>청주교육대학교<br>사회과교육과</strong><p>사회과교육을 공부하고 있어요.</p></div>
+                <div class="about-item"><span class="label">요즘 관심사</span><strong>배우고 가르치며,<br>함께 성장하기</strong><p>좋은 선생님이 되기 위해 한 걸음씩 배우는 중이에요.</p></div>
             </div>
             <div class="dream">
                 <p class="section-kicker">BIG DREAMS</p>
-                <blockquote>나의 꿈은 <mark>하고 싶은 일</mark>을 하며<br>좋은 영향을 나누는 사람이 되는 거예요.</blockquote>
+                <blockquote>나의 꿈은 <mark>교사</mark>가 되어<br>배움의 즐거움을 나누는 사람이 되는 거예요.</blockquote>
             </div>
         </section>
 
@@ -311,9 +311,9 @@ st.markdown(
                 <span class="section-number">02 / PLACES</span>
             </div>
             <div class="trip-grid">
-                <article class="trip"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="일본 교토의 거리"><div class="trip-meta"><strong>교토, 일본</strong><span>기억에 남는 여행지</span></div></article>
-                <article class="trip"><img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=900&q=85" alt="포르투갈 리스본 풍경"><div class="trip-meta"><strong>리스본, 포르투갈</strong><span>다시 가고 싶은 곳</span></div></article>
-                <article class="trip"><img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=900&q=85" alt="제주의 바다 풍경"><div class="trip-meta"><strong>제주, 대한민국</strong><span>마음이 쉬어가는 곳</span></div></article>
+                <article class="trip"><img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?auto=format&fit=crop&w=900&q=85" alt="제주도 여행 사진"><div class="trip-meta"><strong>제주도</strong><span>바다가 좋았던 여행</span></div></article>
+                <article class="trip"><img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=900&q=85" alt="부산 여행 사진"><div class="trip-meta"><strong>부산</strong><span>다시 가고 싶은 곳</span></div></article>
+                <article class="trip"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="일본 여행 사진"><div class="trip-meta"><strong>일본</strong><span>기억에 남는 여행</span></div></article>
             </div>
         </section>
 
@@ -323,7 +323,7 @@ st.markdown(
                 <span class="section-number">03 / HOME</span>
             </div>
             <div class="hometown">
-                <div class="hometown-copy"><p class="section-kicker">MY HOMETOWN</p><h3>부산, 나의 고향</h3><p>바다 냄새와 익숙한 골목이 있는 곳. 고향에서 좋아하는 풍경이나 추억을 적어보세요.</p></div>
+                <div class="hometown-copy"><p class="section-kicker">MY HOMETOWN</p><h3>제천, 나의 고향</h3><p>익숙한 풍경과 추억이 있는 제천. 고향에서 좋아하는 장소와 이야기를 소개해요.</p></div>
                 <div class="hometown-art" aria-label="나의 고향을 상징하는 글자">HOME ↗</div>
             </div>
         </section>
@@ -345,12 +345,11 @@ st.markdown(
             </div>
             <div class="dog">
                 <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1000&q=85" alt="강아지 사진 자리">
-                <div><p class="section-kicker">A VERY GOOD DOG</p><h3>우리 강아지 <span>몽이</span></h3><p>산책과 간식을 세상에서 제일 좋아하는 우리집 막내예요. 이름과 성격, 함께한 이야기를 나만의 문장으로 바꿔주세요.</p><span class="dog-stamp">BEST BUDDY ♡</span></div>
+                <div><p class="section-kicker">A VERY GOOD DOG</p><h3>우리 강아지 <span>초코</span></h3><p>산책과 간식을 세상에서 제일 좋아하는 우리집 막내 초코예요. 함께하는 즐거운 이야기를 소개해요.</p><span class="dog-stamp">BEST BUDDY ♡</span></div>
             </div>
         </section>
 
         <footer class="footer"><span>이 페이지는 나의 이야기로 채워가는 중 ✳</span><span>MADE WITH A LITTLE BIT OF EVERYTHING</span></footer>
     </main>
-    """,
-    unsafe_allow_html=True,
+    """),
 )
